@@ -1,4 +1,4 @@
-package com.example.springbootdemo;
+package com.example.springbootdemo.test;
 
 public class test {
     public static void main(String[] args) {

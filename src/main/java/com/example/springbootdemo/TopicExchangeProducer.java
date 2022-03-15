@@ -6,16 +6,15 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.UUID;
+import java.util.*;
 
 @RestController
-public class TestSendMessageController {
-    @Autowired
-    private AmqpTemplate rabbitMQTemplate;
-
-    public void send(String msg, String routingKey) {
-        rabbitMQTemplate.convertAndSend(DirectRabbitConfig.topicExchangeName, routingKey, msg);
+public class TopicExchangeProducer {
+    public static void main(String[] args) {
+        List<String> list=new ArrayList<>();
+        list.add("1");
+        list.add("1");
+        list.add("1");
+        System.out.println(list.size());
     }
 }

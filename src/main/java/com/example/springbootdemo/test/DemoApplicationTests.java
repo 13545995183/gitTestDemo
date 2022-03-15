@@ -1,2 +1,23 @@
-package com.example.springbootdemo.test;public class DemoApplicationTests {
+package com.example.springbootdemo.test;
+
+import com.example.springbootdemo.simple.SimpleSend;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
+
+@RunWith(SpringRunner.class)
+@SpringBootTest
+public class DemoApplicationTests {
+
+    @Autowired
+    SimpleSend simpleSend;
+
+    @Test
+    public void simpleSend() {
+        simpleSend.send();
+    }
+
 }
+
